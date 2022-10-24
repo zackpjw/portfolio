@@ -1,31 +1,34 @@
 @use "../mixin";
 
 .work {
-  &__box {
+  &-box {
     padding: 0 16px 16px 16px;
 
     @include mixin.portraitTablet {
       margin: auto 50px;
     }
-  }
 
-  &__hero-head {
-    margin-left: 15px;
-    font-size: 3em;
+    &__head {
+      margin-left: 15px;
+      font-size: 3em;
+    }
   }
 }
 
 .card {
-  &__wrapper {
+  // Flexbox applied here.
+  &-wrapper {
     display: flex;
     flex-wrap: wrap;
     padding: 0 16px 16px 16px;
   }
 
-  &__box {
+  // Items' flex-direction & padding applied here.
+  &-box {
     box-sizing: border-box;
     flex-direction: row;
     padding: 10px;
+    margin-bottom: 20px;
 
     @include mixin.mobile {
       flex-direction: column;
@@ -50,7 +53,7 @@
     }
 
     & h1 {
-      font-size: 1.3em;
+      font-size: 1.5em;
       margin: 15px auto;
     }
 
@@ -60,11 +63,30 @@
     }
   }
 
+  // Title changes color when .card__contents is hovered.
+  &__contents {
+    &:hover {
+      h1 {
+        color: mixin.$pink;
+      }
+    }
+  }
+
   &__hero {
+    border-radius: 16px;
+    //"Overflow: hidden" allows img to scale without the borders moving.
+    overflow: hidden;
     width: 100%;
 
     & img {
       width: 100%;
+      z-index: 4;
+      transition: all 300ms;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
     }
   }
 }
