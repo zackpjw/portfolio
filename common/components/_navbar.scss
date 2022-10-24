@@ -1,0 +1,222 @@
+@use "../mixin";
+
+// ANIMATION BRAND
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-bar {
+  animation: slideDown 600ms ease;
+  -webkit-animation: slideDown 600ms ease;
+  -moz-animation: slideDown 600ms ease;
+  background-color: mixin.$bgColor;
+  display: flex;
+  flex: 100%;
+  position: relative;
+  padding: 20px 20px 3em 20px;
+  z-index: 3;
+
+  &__brand {
+    font-family: "Noto Serif SC", serif;
+    font-size: 2em;
+    font-weight: 700;
+  }
+
+  // HAMBURGER ICON START
+  &__toggler {
+    animation: fadeIn 800ms ease;
+    animation-delay: 5000ms;
+    // -webkit-animation: fadeIn 800ms ease;
+    // -moz-animation: fadeIn 800ms ease;
+    border: none;
+    margin-right: 20px;
+    position: fixed;
+    top: 41px;
+    right: 20px;
+    width: 20px;
+    z-index: 1;
+  }
+}
+
+.toggler-icon {
+  background: mixin.$dark;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  height: 3px;
+  margin-right: 50px;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  width: 100%;
+  z-index: 2;
+}
+
+.top-bar {
+  margin-top: -8px;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+}
+
+.middle-bar {
+  margin-top: 0;
+  opacity: 1;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+}
+
+.bottom-bar {
+  margin-top: 8px;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+}
+
+.circle {
+  background: mixin.$bgColor;
+  border-radius: 40px;
+  display: block;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  transform: translate(-10px, -18px);
+  -webkit-transform: translate(-10px, -18px);
+  -moz-transform: translate(-10px, -18px);
+  z-index: 1;
+  opacity: 1;
+}
+// HAMBURGER ICON END
+
+// HAMBURGER ICON CHANGE ON CLICK
+.collapsed.top-bar {
+  margin-top: 0;
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+}
+
+.collapsed.middle-bar {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+}
+
+.collapsed.bottom-bar {
+  margin-top: 0;
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+}
+// HAMBURGER ICON CHANGE ON CLICK
+
+// HAMBURGER ANIMATION
+/* ANIMATE NAVBAR FROM RIGHT TO LEFT */
+@keyframes openNav {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    width: 200px;
+  }
+}
+
+@keyframes closeNav {
+  0% {
+    opacity: 1;
+    width: 200px;
+  }
+
+  100% {
+    opacity: 0;
+    width: 43px;
+  }
+}
+
+.forward {
+  display: block;
+  animation: openNav 0.5s ease alternate;
+  -webkit-animation: openNav 0.5s ease alternate;
+  -moz-animation: openNav 0.5s ease alternate;
+  animation-fill-mode: forwards;
+}
+
+.reverse {
+  display: block;
+  animation: closeNav 0.5s ease alternate;
+  -webkit-animation: closeNav 0.5s ease alternate;
+  -moz-animation: closeNav 0.5s ease alternate;
+  animation-fill-mode: forwards;
+}
+// HAMBURGER ANIMATION END
+
+.nav {
+  // COLLAPSE BAR
+  &__menu {
+    background-color: mixin.$dark;
+    box-shadow: rgba(0, 0, 0, 0.34902) 0px 5px 15px;
+    border-radius: 40px;
+    display: flex;
+    height: 50px;
+    margin: 0;
+    width: 0px;
+    padding: 0;
+    position: fixed;
+    top: 19px;
+    right: 22px;
+  }
+
+  // NAV ITEMS
+  &__item {
+    font-family: mixin.$fontKanit;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    list-style: none;
+    margin-top: 13px;
+    padding-left: 25px;
+  }
+
+  &__link {
+    display: flex;
+    color: mixin.$light;
+    opacity: 0;
+    z-index: 2;
+
+    &:hover {
+      color: mixin.$bgColor;
+      text-decoration: underline;
+      text-underline-offset: 7px;
+      transform: translateY(-2px);
+      transition: transform 0.2s ease;
+      -webkit-transition: transform 0.2s ease;
+      -moz-transition: transform 0.2s ease;
+    }
+  }
+}
+
+.active {
+  opacity: 1;
+  transition-delay: 0.2s;
+}

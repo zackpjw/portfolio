@@ -1,0 +1,143 @@
+@use "../mixin";
+
+#footer {
+  background-color: mixin.$black;
+  margin-top: 4em;
+  user-select: none;
+}
+
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: column;
+}
+
+.footer {
+  &__box {
+    padding: 0 16px 16px 16px;
+
+    @include mixin.portraitTablet {
+      margin: auto 50px;
+    }
+
+    @include mixin.horizontalTablet {
+      padding: 0 50px 16px 50px;
+    }
+
+    @include mixin.laptop {
+      padding: 0 50px 16px 50px;
+    }
+
+    @include mixin.desktop {
+      padding: 0 60px 16px 60px;
+    }
+
+    &:nth-child(1) {
+      @include mixin.horizontalTablet {
+        width: 400px;
+      }
+
+      @include mixin.desktop {
+        width: 700px;
+      }
+    }
+  }
+
+  &__split {
+    display: flex;
+    flex-direction: column;
+
+    @include mixin.horizontalTablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include mixin.laptop {
+      flex-direction: row;
+      flex-basis: 100%;
+    }
+
+    @include mixin.desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__head {
+    color: mixin.$bgColor;
+    cursor: text;
+    font-family: "Antonio", sans-serif;
+    font-size: 3.5em;
+    margin: 1.5em auto 1em auto;
+    text-transform: uppercase;
+
+    @include mixin.desktop {
+      font-size: 4.3em;
+      margin: 1.5em auto 0.1em auto;
+    }
+  }
+
+  &__subhead {
+    color: mixin.$neutral;
+    cursor: text;
+    font-size: 0.75em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+  }
+
+  &__descrip {
+    color: mixin.$light;
+    cursor: text;
+    font-size: 1em;
+    margin-bottom: 2.5em;
+
+    @include mixin.desktop {
+      font-size: 1.2em;
+    }
+
+    & ul {
+      margin-top: 0;
+
+      & a {
+        color: mixin.$light;
+      }
+    }
+  }
+
+  &__items {
+    color: mixin.$light;
+    margin-bottom: 0.5em;
+  }
+
+  &__email {
+    font-size: 1.1em;
+    margin: 2.5em auto;
+
+    & a {
+      color: mixin.$light;
+
+      &:hover {
+        color: #fff;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+      }
+    }
+  }
+
+  &__text {
+    cursor: text;
+    font-family: mixin.$fontKanit;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    margin: 16px 0;
+    user-select: none;
+  }
+}
+
+.light {
+  color: mixin.$light;
+
+  &:hover {
+    color: mixin.$light;
+  }
+}

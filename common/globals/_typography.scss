@@ -1,0 +1,44 @@
+@use "../mixin";
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: mixin.$fontCircular;
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  font-family: mixin.$fontKanit;
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  //   font-family: mixin.$fontKanit;
+  color: mixin.$dark;
+  text-decoration: none;
+  list-style: none;
+
+  &:hover {
+    color: mixin.$grey;
+  }
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 1.3em;
+}

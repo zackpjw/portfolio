@@ -1,0 +1,161 @@
+@use "../mixin";
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-container {
+  display: flex;
+  flex-flow: wrap;
+  position: relative;
+  flex-direction: column;
+}
+
+.home {
+  margin-top: 3em;
+
+  &__box {
+    flex: 100%;
+    padding: 16px;
+
+    @include mixin.portraitTablet {
+      margin: auto 50px;
+    }
+
+    @include mixin.horizontalTablet {
+      margin: auto 50px;
+    }
+
+    @include mixin.laptop {
+      margin: auto 100px;
+    }
+
+    @include mixin.desktop {
+      margin: auto 130px;
+    }
+  }
+
+  &__heading {
+    margin-top: 1em;
+    width: 95%;
+    animation: slideUp 800ms ease;
+    -webkit-animation: slideUp 800ms ease;
+    -moz-animation: slideUp 800ms ease;
+
+    @include mixin.mobile {
+      margin-top: 4em;
+    }
+
+    @include mixin.portraitTablet {
+      font-size: 2.7em;
+      margin-top: 3em;
+      width: 90%;
+    }
+
+    @include mixin.horizontalTablet {
+      font-size: 3.4em;
+      margin-top: 2.8em;
+      width: 80%;
+    }
+
+    @include mixin.laptop {
+      font-size: 3.6em;
+      line-height: 1.1;
+      margin-top: 3em;
+      width: 80%;
+    }
+
+    @include mixin.desktop {
+      font-size: 3.8em;
+      line-height: 1.1;
+      margin-top: 2.8em;
+      width: 70%;
+    }
+  }
+
+  &__icon {
+    display: block;
+    text-decoration: none;
+    transform: translateY(-0.3em);
+    -webkit-transform: translateY(-0.3em);
+    -moz-transform: translateY(-0.3em);
+
+    @include mixin.horizontalTablet {
+      font-size: 0.7em;
+      margin-top: 2em;
+    }
+
+    @include mixin.laptop {
+      font-size: 0.5em;
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+
+    @include mixin.desktop {
+      font-size: 0.6em;
+      margin-bottom: 0.6em;
+    }
+  }
+
+  &__textchanger:hover {
+    color: mixin.$dark;
+    cursor: pointer;
+  }
+
+  &__descrip {
+    margin-top: 2em;
+    width: 95%;
+    animation: slideUp 700ms ease;
+    -webkit-animation: slideUp 700ms ease;
+    -moz-animation: slideUp 700ms ease;
+
+    @include mixin.portraitTablet {
+      width: 90%;
+    }
+
+    @include mixin.horizontalTablet {
+      width: 70%;
+    }
+
+    @include mixin.laptop {
+      width: 80%;
+    }
+
+    @include mixin.desktop {
+      margin-top: 2.5em;
+      width: 70%;
+    }
+  }
+}
+
+.email,
+.internet {
+  text-decoration: underline;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.email {
+  margin: 2em 0;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+
+  @include mixin.desktop {
+    margin: 3.2em 0;
+  }
+}
+
+.internet {
+  text-underline-offset: 3px;
+}

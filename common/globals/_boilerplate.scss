@@ -1,0 +1,9 @@
+@use "../mixin";
+
+body {
+  background-color: mixin.$bgColor;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  animation-fill-mode: backwards;
+}

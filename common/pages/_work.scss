@@ -1,0 +1,27 @@
+@use "../mixin";
+
+.work {
+  &__box {
+    padding: 0 16px 16px 16px;
+
+    @include mixin.portraitTablet {
+      margin: auto 50px;
+    }
+  }
+
+  &__hero-head {
+    font-size: 3em;
+  }
+
+  &__card {
+    margin: auto;
+  }
+
+  &__hero {
+    width: 100%;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
