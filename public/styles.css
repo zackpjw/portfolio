@@ -1010,4 +1010,55 @@ p {
 .card__hero img:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+
+.project-box {
+  padding: 0 16px 16px 16px;
+}
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .project-box {
+    margin: auto 50px;
+  }
+}
+.project-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 16px 16px 16px;
+}
+.project-card__info {
+  box-sizing: border-box;
+  flex-direction: row;
+  padding: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .project-card__info {
+    flex-direction: column;
+    padding: auto;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 994px) and (max-width: 1200px) {
+  .project-card__info {
+    flex: 1 1 50%;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .project-card__info {
+    flex: 1 1 50%;
+  }
+}
+.project-card__info:nth-child(1) h1 {
+  font-size: 1.4em;
+  margin-top: 20px;
+}
+.project-card__info:nth-child(1) p {
+  font-size: 1em;
+}
+.project-card__info:nth-child(2) h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+.project-card__info:nth-child(2) p {
+  font-size: 1.4em;
+  line-height: 1.5;
 }/*# sourceMappingURL=styles.css.map */

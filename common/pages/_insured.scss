@@ -1,0 +1,65 @@
+@use "../mixin";
+
+.project {
+  &-box {
+    padding: 0 16px 16px 16px;
+
+    @include mixin.portraitTablet {
+      margin: auto 50px;
+    }
+  }
+  // Flexbox applied here.
+  &-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 16px 16px 16px;
+  }
+
+  // Items' flex-direction & padding applied here.
+  &-card {
+    &__info {
+      box-sizing: border-box;
+      flex-direction: row;
+      padding: 10px;
+      // margin-bottom: 20px;
+
+      @include mixin.mobile {
+        flex-direction: column;
+        padding: auto;
+        width: 100%;
+      }
+
+      @include mixin.laptop {
+        flex: 1 1 50%;
+      }
+
+      @include mixin.desktop {
+        flex: 1 1 50%;
+      }
+
+      &:nth-child(1) {
+        & h1 {
+          font-size: 1.4em;
+          margin-top: 20px;
+        }
+
+        & p {
+          font-size: 1em;
+          //   margin-top: 20px;
+        }
+      }
+
+      &:nth-child(2) {
+        & h1 {
+          font-size: 4em;
+          margin-bottom: 20px;
+        }
+
+        & p {
+          font-size: 1.4em;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
