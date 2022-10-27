@@ -1061,4 +1061,15 @@ p {
 .project-card__info:nth-child(2) p {
   font-size: 1.4em;
   line-height: 1.5;
+}
+.project-banner {
+  overflow: hidden;
+  height: auto;
+  width: 100vw;
+}
+.project-banner img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 46%;
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */

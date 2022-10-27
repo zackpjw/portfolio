@@ -62,4 +62,15 @@
       }
     }
   }
+  &-banner {
+    overflow: hidden;
+    height: auto;
+    width: 100vw;
+
+    & img {
+      object-fit: cover;
+      height: 46%;
+      width: 100%;
+    }
+  }
 }
