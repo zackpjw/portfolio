@@ -1,7 +1,7 @@
 @use "../mixin";
 
 .project {
-  &-box {
+  &-wrapper {
     padding: 0 16px 16px 16px;
 
     @include mixin.portraitTablet {
@@ -9,9 +9,10 @@
     }
   }
   // Flexbox applied here.
-  &-wrapper {
+  &-block {
     display: flex;
     flex-wrap: wrap;
+    margin: 30px 0;
     padding: 0 16px 16px 16px;
   }
 
@@ -21,6 +22,7 @@
       box-sizing: border-box;
       flex-direction: row;
       padding: 10px;
+      margin: 30px 0;
       // margin-bottom: 20px;
 
       @include mixin.mobile {
@@ -39,8 +41,7 @@
 
       &:nth-child(1) {
         & h1 {
-          font-size: 1.4em;
-          margin-top: 20px;
+          font-size: 1.2em;
         }
 
         & p {
@@ -52,23 +53,62 @@
       &:nth-child(2) {
         & h1 {
           font-size: 4em;
-          margin-bottom: 20px;
+          margin-bottom: 10px;
+          transform: translateY(-20px);
         }
 
         & p {
-          font-size: 1.4em;
+          font-size: 1.2em;
           line-height: 1.5;
         }
       }
     }
+
+    &__item {
+      box-sizing: border-box;
+      flex-direction: row;
+      padding: 10px;
+
+      @include mixin.mobile {
+        flex-direction: column;
+        padding: auto;
+        width: 100%;
+      }
+
+      @include mixin.portraitTablet {
+        flex: 0 1 100%;
+      }
+
+      @include mixin.horizontalTablet {
+        flex: 0 1 50%;
+      }
+
+      @include mixin.laptop {
+        flex: 0 1 50%;
+      }
+
+      @include mixin.desktop {
+        flex: 0 1 50%;
+      }
+
+      & img {
+        // padding: 40px;
+        // width: 100%;
+
+        width: 100%;
+        height: auto;
+      }
+    }
   }
+
   &-banner {
     overflow: hidden;
     height: auto;
-    width: 100vw;
+    width: 100%;
 
     & img {
       object-fit: cover;
+      //   margin: 50px 0;
       height: 46%;
       width: 100%;
     }
