@@ -1030,7 +1030,6 @@ p {
   box-sizing: border-box;
   flex-direction: row;
   padding: 10px;
-  margin: 30px 0;
 }
 @media only screen and (max-width: 600px) {
   .project-card__info {
@@ -1041,11 +1040,13 @@ p {
 }
 @media only screen and (min-width: 994px) and (max-width: 1200px) {
   .project-card__info {
+    margin: 30px 0;
     flex: 1 1 50%;
   }
 }
 @media only screen and (min-width: 1201px) {
   .project-card__info {
+    margin: 30px 0;
     flex: 1 1 50%;
   }
 }

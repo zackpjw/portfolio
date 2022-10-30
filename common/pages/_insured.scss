@@ -22,7 +22,6 @@
       box-sizing: border-box;
       flex-direction: row;
       padding: 10px;
-      margin: 30px 0;
       // margin-bottom: 20px;
 
       @include mixin.mobile {
@@ -32,10 +31,12 @@
       }
 
       @include mixin.laptop {
+        margin: 30px 0;
         flex: 1 1 50%;
       }
 
       @include mixin.desktop {
+        margin: 30px 0;
         flex: 1 1 50%;
       }
 
