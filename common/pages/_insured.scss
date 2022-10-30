@@ -1,6 +1,6 @@
 @use "../mixin";
 
-.project {
+.case {
   &-wrapper {
     padding: 0 16px 16px 16px;
 
@@ -18,7 +18,7 @@
 
   // Items' flex-direction & padding applied here.
   &-card {
-    &__info {
+    &__col {
       box-sizing: border-box;
       flex-direction: row;
       padding: 10px;
