@@ -263,16 +263,19 @@ p {
   display: flex;
   color: #cccccc;
   opacity: 0;
-  z-index: 2;
+  z-index: 1;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
 }
 .nav__link:hover {
   color: #e8e8e8;
   text-decoration: underline;
   text-underline-offset: 7px;
   transform: translateY(-2px);
-  transition: transform 0.2s ease;
-  -webkit-transition: transform 0.2s ease;
-  -moz-transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
 }
 
 .active {
@@ -455,6 +458,9 @@ p {
   margin-top: 3em;
 }
 .home__box {
+  animation: slideUp 800ms ease var(--delay);
+  -webkit-animation: slideUp 800ms ease var(--delay);
+  -moz-animation: slideUp 800ms ease var(--delay);
   flex: 100%;
   padding: 16px;
 }
@@ -481,9 +487,6 @@ p {
 .home__heading {
   margin-top: 1em;
   width: 95%;
-  animation: slideUp 800ms ease;
-  -webkit-animation: slideUp 800ms ease;
-  -moz-animation: slideUp 800ms ease;
 }
 @media only screen and (max-width: 600px) {
   .home__heading {
@@ -553,9 +556,6 @@ p {
 .home__descrip {
   margin-top: 2em;
   width: 95%;
-  animation: slideUp 700ms ease;
-  -webkit-animation: slideUp 700ms ease;
-  -moz-animation: slideUp 700ms ease;
 }
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .home__descrip {
@@ -605,9 +605,9 @@ p {
 }
 
 .ab__box {
-  animation: slideUp 700ms ease;
-  -webkit-animation: slideUp 700ms ease;
-  -moz-animation: slideUp 700ms ease;
+  animation: slideUp 900ms ease;
+  -webkit-animation: slideUp 900ms ease;
+  -moz-animation: slideUp 900ms ease;
   flex-direction: column;
   padding: 0 16px 16px 16px;
   flex: 100%;
