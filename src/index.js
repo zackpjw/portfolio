@@ -44,7 +44,6 @@ function textChanger() {
     textChanger.innerHTML = words[(i = (i + 1) % words.length)];
   }, 1000);
 }
-textChanger();
 
 // C) ABOUT
 // VARIABLES
@@ -134,7 +133,7 @@ function topTextGenerator() {
     removeArrayItems();
   }, 17000);
 }
-topTextGenerator();
+// topTextGenerator();
 
 // BTM TEXT GENERATOR
 function btmTextGenerator() {
@@ -155,7 +154,7 @@ function btmTextGenerator() {
     removeArrayItems();
   }, 17300);
 }
-btmTextGenerator();
+// btmTextGenerator();
 
 // LOOP ANIMATION INFINITE
 function loop() {
@@ -172,7 +171,7 @@ function loop() {
     }, 22000);
   }
 }
-loop();
+// loop();
 
 // TO MAKE THE HEROWRAP & DESCRIPTIONS SPLIT
 // const mobileViewport = document.querySelector(".is__mobile");

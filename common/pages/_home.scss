@@ -23,6 +23,9 @@
   margin-top: 3em;
 
   &__box {
+    animation: slideUp 800ms ease var(--delay);
+    -webkit-animation: slideUp 800ms ease var(--delay);
+    -moz-animation: slideUp 800ms ease var(--delay);
     flex: 100%;
     padding: 16px;
 
@@ -46,9 +49,6 @@
   &__heading {
     margin-top: 1em;
     width: 95%;
-    animation: slideUp 800ms ease;
-    -webkit-animation: slideUp 800ms ease;
-    -moz-animation: slideUp 800ms ease;
 
     @include mixin.mobile {
       margin-top: 4em;
@@ -113,9 +113,6 @@
   &__descrip {
     margin-top: 2em;
     width: 95%;
-    animation: slideUp 700ms ease;
-    -webkit-animation: slideUp 700ms ease;
-    -moz-animation: slideUp 700ms ease;
 
     @include mixin.portraitTablet {
       width: 90%;
