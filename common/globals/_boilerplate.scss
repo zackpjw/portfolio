@@ -1,5 +1,9 @@
 @use "../mixin";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: mixin.$bgColor;
   overflow-x: hidden;
