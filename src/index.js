@@ -173,6 +173,26 @@ function loop() {
 }
 // loop();
 
+let entranceAnimationEnd = false;
+let loadingAnimationEnd = false;
+
+function loadingAnimation() {
+  if (loadingAnimationEnd == false) {
+    gsap.from(".loader", { duration: 1, y: "0vh", ease: "expo.out", delay: 1 });
+    loadingAnimationEnd = true;
+  }
+}
+loadingAnimation();
+
+// function entranceAnimation() {
+//   if (!loadingAnimationEnd == true) {
+//     gsap.to(".loader", { duration: 1, y: "-100vh", ease: "power3.out" });
+//   }
+// }
+// entranceAnimation();
+
+// gsap.to(".loader", { duration: 1, y: "0h", ease: "expo.out" });
+
 // TO MAKE THE HEROWRAP & DESCRIPTIONS SPLIT
 // const mobileViewport = document.querySelector(".is__mobile");
 // const laptopViewport = document.querySelector(".is__laptop");
