@@ -10,18 +10,20 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
   }
 }
 
 .nav-bar {
-  animation: slideDown 600ms ease;
-  -webkit-animation: slideDown 600ms ease;
-  -moz-animation: slideDown 600ms ease;
+  animation: slideDown 600ms ease var(--delay);
+  -webkit-animation: slideDown 600ms ease var(--delay);
+  -moz-animation: slideDown 600ms ease var(--delay);
   background-color: mixin.$bgColor;
   display: flex;
   flex: 100%;
   position: relative;
   padding: 20px 20px 3em 20px;
+  visibility: hidden;
   z-index: 3;
 
   &__brand {

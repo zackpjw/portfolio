@@ -184,6 +184,28 @@ function loadingAnimation() {
 }
 loadingAnimation();
 
+let navbar = document.querySelector(".nav-bar");
+let homeBox = document.querySelectorAll(".home__box");
+function finalStateNavbar() {
+  navbar.addEventListener("animationend", function () {
+    navbar.style.visibility = "visible";
+  });
+}
+finalStateNavbar();
+
+function finalStateHomeBox() {
+  for (let i = 0; i < homeBox.length; i++) {
+    homeBox[0].addEventListener("animationend", function () {
+      homeBox[0].style.visibility = "visible";
+    });
+
+    homeBox[1].addEventListener("animationend", function () {
+      homeBox[1].style.visibility = "visible";
+    });
+  }
+}
+finalStateHomeBox();
+
 // function entranceAnimation() {
 //   if (!loadingAnimationEnd == true) {
 //     gsap.to(".loader", { duration: 1, y: "-100vh", ease: "power3.out" });

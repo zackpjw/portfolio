@@ -60,6 +60,7 @@ p {
   100% {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
   }
 }
 
@@ -71,17 +72,19 @@ p {
   100% {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
   }
 }
 .nav-bar {
-  animation: slideDown 600ms ease;
-  -webkit-animation: slideDown 600ms ease;
-  -moz-animation: slideDown 600ms ease;
+  animation: slideDown 600ms ease var(--delay);
+  -webkit-animation: slideDown 600ms ease var(--delay);
+  -moz-animation: slideDown 600ms ease var(--delay);
   background-color: #e8e8e8;
   display: flex;
   flex: 100%;
   position: relative;
   padding: 20px 20px 3em 20px;
+  visibility: hidden;
   z-index: 3;
 }
 .nav-bar__brand {
@@ -442,7 +445,7 @@ p {
   height: 100vh;
   transform: translateY(-100vh);
   z-index: 999;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 @-webkit-keyframes slideUp {
@@ -453,6 +456,7 @@ p {
   100% {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
   }
 }
 
@@ -464,6 +468,7 @@ p {
   100% {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
   }
 }
 .section-container {
@@ -482,6 +487,7 @@ p {
   -moz-animation: slideUp 800ms ease var(--delay);
   flex: 100%;
   padding: 16px;
+  visibility: hidden;
 }
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .home__box {
