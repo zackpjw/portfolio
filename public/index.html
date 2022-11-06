@@ -7,8 +7,18 @@
 
     <!-- EXTERNAL JS -->
     <script defer type="text/javascript" src="../src/index.js"></script>
-    <script defer type="text/javascript" src="../src/preloader.js"></script>
-    <script defer type="text/javascript" src="../src/home.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="../src/preloader.js"
+      onload="mainLoadingAnimation();"
+    ></script>
+    <script
+      defer
+      type="text/javascript"
+      src="../src/home.js"
+      onload="textChanger()"
+    ></script>
 
     <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
@@ -43,7 +53,7 @@
     <title>Zack | The purposeful pathfinder</title>
   </head>
 
-  <body onload="textChanger()">
+  <body>
     <div class="loader">
       ::before
       <div class="loader__box">
@@ -86,7 +96,7 @@
 
     <section id="home">
       <div class="section-container">
-        <div class="home__box">
+        <div class="home__box" style="--delay: 6500ms">
           <h1 class="home__heading">
             <a class="home__icon">💫 <br /></a>Hey there *waves*, my name is
             Zack, I am an aspiring <a class="home__textchanger">magician</a>.

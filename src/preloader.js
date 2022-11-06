@@ -1,5 +1,5 @@
 // ~PRELOADER JS
-function loadingAnimation() {
+function mainLoadingAnimation() {
   let loadingAnimationEnd = false;
   if (loadingAnimationEnd == false) {
     gsap.from(".loader", {
@@ -11,7 +11,6 @@ function loadingAnimation() {
     loadingAnimationEnd = true;
   }
 }
-loadingAnimation();
 
 // PRELOADER PERCENTAGE COUNTER
 let count = 0;
