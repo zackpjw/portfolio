@@ -516,7 +516,6 @@ p {
   100% {
     opacity: 1;
     transform: translateY(0);
-    visibility: visible;
   }
 }
 
@@ -528,7 +527,6 @@ p {
   100% {
     opacity: 1;
     transform: translateY(0);
-    visibility: visible;
   }
 }
 .section-container {
@@ -547,7 +545,7 @@ p {
   -moz-animation: slideUp 800ms ease var(--delay);
   flex: 100%;
   padding: 16px;
-  visibility: hidden;
+  opacity: 0;
 }
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .home__box {
@@ -690,9 +688,9 @@ p {
 }
 
 .ab__box {
-  animation: slideUp 900ms ease;
-  -webkit-animation: slideUp 900ms ease;
-  -moz-animation: slideUp 900ms ease;
+  animation: slideUp 800ms ease;
+  -webkit-animation: slideUp 800ms ease;
+  -moz-animation: slideUp 800ms ease;
   flex-direction: column;
   padding: 0 16px 16px 16px;
   flex: 100%;

@@ -14,11 +14,13 @@ function textChanger() {
 function finalStateHomeBox() {
   for (let i = 0; i < homeBox.length; i++) {
     homeBox[0].addEventListener("animationend", function () {
-      homeBox[0].style.visibility = "visible";
+      // homeBox[0].style.visibility = "visible";
+      homeBox[0].style.opacity = "1";
     });
 
     homeBox[1].addEventListener("animationend", function () {
-      homeBox[1].style.visibility = "visible";
+      // homeBox[1].style.visibility = "visible";
+      homeBox[1].style.opacity = "1";
     });
   }
 }

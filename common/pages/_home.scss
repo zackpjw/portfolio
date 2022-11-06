@@ -9,7 +9,6 @@
   100% {
     opacity: 1;
     transform: translateY(0);
-    visibility: visible;
   }
 }
 
@@ -29,7 +28,7 @@
     -moz-animation: slideUp 800ms ease var(--delay);
     flex: 100%;
     padding: 16px;
-    visibility: hidden;
+    opacity: 0;
 
     @include mixin.portraitTablet {
       margin: auto 50px;
