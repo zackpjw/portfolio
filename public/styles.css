@@ -461,6 +461,8 @@ p {
   transform: translateY(-100vh);
   z-index: 999;
   overflow-y: hidden;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 600px) {
   .loader__box {

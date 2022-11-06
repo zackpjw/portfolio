@@ -20,6 +20,8 @@
   //   transform: translateY(0vh);
   z-index: 999;
   overflow-y: hidden;
+  will-change: transform;
+  transform-style: preserve-3d;
 
   &__box {
     @include mixin.mobile {

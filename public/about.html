@@ -7,12 +7,7 @@
 
     <!-- EXTERNAL JS -->
     <script defer type="text/javascript" src="../src/index.js"></script>
-    <script
-      defer
-      type="text/javascript"
-      src="../src/preloader.js"
-      onload="secondLoadingAnimation();"
-    ></script>
+
     <script
       defer
       type="text/javascript"
@@ -82,7 +77,7 @@
 
     <section id="home">
       <div class="section-container">
-        <div class="ab__box" style="--delay: 1000ms">
+        <div class="ab__box" style="--delay: 1200ms">
           <div class="herowrap is__mobile">
             <p class="ab__hero-sub light-container">zack w. — EST 1999</p>
             <h1 class="ab__hero-head top-text tricks light-container"></h1>
@@ -95,7 +90,7 @@
               src="../images/portrait.jpg"
             />
           </div>
-          <div class="ab__column">
+          <div class="ab__column" style="--delay: 1200ms">
             <div class="herowrap is__laptop">
               <p class="ab__hero-sub light-container">zack w. — EST 1999</p>
               <h1 class="ab__hero-head top-text tricks light-container"></h1>
@@ -190,6 +185,13 @@
 
     <!-- GSAP ANIMATION -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
+    <!-- EXTERNAL JS -->
+    <script
+      type="text/javascript"
+      src="../src/preloader.js"
+      onload="secondLoadingAnimation();"
+    ></script>
 
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
