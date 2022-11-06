@@ -1020,7 +1020,11 @@ p {
 }
 
 .work-box {
+  animation: slideUp 1000ms ease var(--delay);
+  -webkit-animation: slideUp 1000ms ease var(--delay);
+  -moz-animation: slideUp 1000ms ease var(--delay);
   padding: 0 16px 16px 16px;
+  opacity: 0;
 }
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .work-box {
@@ -1033,9 +1037,13 @@ p {
 }
 
 .card-wrapper {
+  animation: slideUp 1000ms ease var(--delay);
+  -webkit-animation: slideUp 1000ms ease var(--delay);
+  -moz-animation: slideUp 1000ms ease var(--delay);
   display: flex;
   flex-wrap: wrap;
   padding: 0 16px 16px 16px;
+  opacity: 0;
 }
 .card-box {
   box-sizing: border-box;

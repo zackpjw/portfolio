@@ -2,7 +2,11 @@
 
 .work {
   &-box {
+    animation: slideUp 1000ms ease var(--delay);
+    -webkit-animation: slideUp 1000ms ease var(--delay);
+    -moz-animation: slideUp 1000ms ease var(--delay);
     padding: 0 16px 16px 16px;
+    opacity: 0;
 
     @include mixin.portraitTablet {
       margin: auto 50px;
@@ -18,9 +22,13 @@
 .card {
   // Flexbox applied here.
   &-wrapper {
+    animation: slideUp 1000ms ease var(--delay);
+    -webkit-animation: slideUp 1000ms ease var(--delay);
+    -moz-animation: slideUp 1000ms ease var(--delay);
     display: flex;
     flex-wrap: wrap;
     padding: 0 16px 16px 16px;
+    opacity: 0;
   }
 
   // Items' flex-direction & padding applied here.

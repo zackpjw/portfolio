@@ -7,6 +7,13 @@
 
     <!-- EXTERNAL JS -->
     <script defer type="text/javascript" src="../src/index.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="../src/preloader.js"
+      onload="secondLoadingAnimation();"
+    ></script>
+    <script defer type="text/javascript" src="../src/work.js"></script>
 
     <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
@@ -42,6 +49,7 @@
   </head>
 
   <body>
+    <div class="loader">::before</div>
     <header id="header" class="section-container">
       <nav class="nav-bar" style="--delay: 800ms">
         <a class="nav-bar__brand" href="index.html">杰</a>
@@ -69,8 +77,10 @@
 
     <section id="home">
       <div class="section-container">
-        <div class="work-box"><h1 class="work-box__head">WORK</h1></div>
-        <div class="card-wrapper">
+        <div class="work-box" style="--delay: 1200ms">
+          <h1 class="work-box__head">WORK</h1>
+        </div>
+        <div class="card-wrapper" style="--delay: 1200ms">
           <div class="card-box">
             <div class="card__contents">
               <a href="korean-yea-won.html">
@@ -153,6 +163,9 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script> -->
+
+    <!-- GSAP ANIMATION -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
