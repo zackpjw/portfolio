@@ -436,6 +436,25 @@ p {
   color: #cccccc;
 }
 
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .loader {
   background-color: #212427;
   position: absolute;
@@ -446,6 +465,47 @@ p {
   transform: translateY(-100vh);
   z-index: 999;
   overflow-y: hidden;
+}
+@media only screen and (max-width: 600px) {
+  .loader__box {
+    margin: 100px 60px;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .loader__box {
+    margin: 100px 80px;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 993px) {
+  .loader__box {
+    margin: 100px 200px;
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 994px) and (max-width: 1200px) {
+  .loader__box {
+    margin: 100px 300px;
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .loader__box {
+    margin: 100px 500px;
+    width: 20%;
+  }
+}
+.loader__box h1 {
+  animation: fadeOut 800ms ease 5000ms;
+  -webkit-animation: fadeOut 800ms ease 5000ms;
+  -moz-animation: fadeOut 800ms ease 5000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  color: #cccccc;
+  font-size: 0.8em;
+  margin-bottom: 20px;
+  visibility: visible;
 }
 
 @-webkit-keyframes slideUp {

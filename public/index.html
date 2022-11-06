@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <!-- EXTERNAL JS -->
+    <script defer type="text/javascript" src="../src/index.js"></script>
+    <script defer type="text/javascript" src="../src/preloader.js"></script>
+    <script defer type="text/javascript" src="../src/home.js"></script>
+
     <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
 
@@ -39,9 +44,23 @@
   </head>
 
   <body onload="textChanger()">
-    <div class="loader">::before</div>
+    <div class="loader">
+      ::before
+      <div class="loader__box">
+        <h1>Entering in Zack's portfolio.</h1>
+        <h1 class="percentage-loader">0</h1>
+        <h1>
+          Additional Information<br />(1) He enjoys building LEGO Star Wars
+          sets.
+        </h1>
+        <h1>
+          (2) He can't choose between his favourite superhero; Batman or
+          Spider-man.
+        </h1>
+      </div>
+    </div>
     <header id="header" class="section-container">
-      <nav class="nav-bar" style="--delay: 1600ms">
+      <nav class="nav-bar" style="--delay: 6000ms">
         <a class="nav-bar__brand" href="index.html">杰</a>
         <button class="nav-bar__toggler" type="button">
           <span class="toggler-icon top-bar"></span>
@@ -67,26 +86,26 @@
 
     <section id="home">
       <div class="section-container">
-        <div class="home__box" style="--delay: 1500ms">
+        <div class="home__box" style="--delay: 6500ms">
           <h1 class="home__heading">
             <a class="home__icon">💫 <br /></a>Hey there *waves*, my name is
             Zack, I am an aspiring <a class="home__textchanger">magician</a>.
           </h1>
-          <p class="home__descrip" st>
+          <p class="home__descrip">
             I learned how to write code because I figured out one day this
             <a class="internet">Internet</a> thing would help me share my art
             with nice people all over the world. That is a little bit about me,
             how can I help you?
           </p>
-          <h2 class="email" s>
+          <h2 class="email">
             <a href="mailto:woo.pakjie@outlook.com">woo.pakjie@outlook.com</a>
           </h2>
         </div>
-        <div class="home__box" style="--delay: 1650ms">
+        <div class="home__box" style="--delay: 6650ms">
           <p class="footer__text" s>
             video games + images + code ©2022 zack woo
           </p>
-          <p class="footer__text" s>
+          <p class="footer__text">
             <a href="https://my.linkedin.com/in/pakjiewoo" target="_blank"
               >linkedin</a
             >
@@ -107,9 +126,6 @@
 
     <!-- GSAP ANIMATION -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-
-    <!-- EXTERNAL JS -->
-    <script src="../src/index.js"></script>
 
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
