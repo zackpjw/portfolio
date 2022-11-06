@@ -125,3 +125,12 @@ function loop() {
   }
 }
 // loop();
+
+// SET VISIBILITY OF ABOUT TO VISIBLE AFTER ANIMATION ENDS
+function finalStateAboutBox() {
+  let aboutBox = document.querySelector(".ab__box");
+  aboutBox.addEventListener("animationend", function () {
+    aboutBox.style.opacity = "1";
+  });
+}
+finalStateAboutBox();

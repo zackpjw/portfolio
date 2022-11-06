@@ -7,6 +7,18 @@
 
     <!-- EXTERNAL JS -->
     <script defer type="text/javascript" src="../src/index.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="../src/preloader.js"
+      onload="secondLoadingAnimation();"
+    ></script>
+    <script
+      defer
+      type="text/javascript"
+      src="../src/about.js"
+      onload="topTextGenerator(); btmTextGenerator(); loop();"
+    ></script>
 
     <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
@@ -41,7 +53,8 @@
     <title>Zack | The purposeful pathfinder</title>
   </head>
 
-  <body onload="topTextGenerator(); btmTextGenerator(); loop();">
+  <body>
+    <div class="loader">::before</div>
     <header id="header" class="section-container">
       <nav class="nav-bar" style="--delay: 800ms">
         <a class="nav-bar__brand" href="index.html">杰</a>
@@ -69,7 +82,7 @@
 
     <section id="home">
       <div class="section-container">
-        <div class="ab__box" style="--delay: 800ms">
+        <div class="ab__box" style="--delay: 1000ms">
           <div class="herowrap is__mobile">
             <p class="ab__hero-sub light-container">zack w. — EST 1999</p>
             <h1 class="ab__hero-head top-text tricks light-container"></h1>
@@ -175,7 +188,8 @@
       crossorigin="anonymous"
     ></script> -->
 
-    <script type="text/javascript" src="../src/about.js"></script>
+    <!-- GSAP ANIMATION -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>

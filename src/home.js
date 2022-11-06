@@ -12,6 +12,7 @@ function textChanger() {
 
 // SET VISIBILITY OF HOMEBOX TO VISIBLE AFTER ANIMATION ENDS
 function finalStateHomeBox() {
+  let homeBox = document.querySelectorAll(".home__box");
   for (let i = 0; i < homeBox.length; i++) {
     homeBox[0].addEventListener("animationend", function () {
       // homeBox[0].style.visibility = "visible";

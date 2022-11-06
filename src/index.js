@@ -34,9 +34,8 @@ menuBtn.addEventListener("click", function () {
 });
 
 // SET VISIBILITY OF NAVBAR TO VISIBLE AFTER ANIMATION ENDS
-let navbar = document.querySelector(".nav-bar");
-let homeBox = document.querySelectorAll(".home__box");
 function finalStateNavbar() {
+  let navbar = document.querySelector(".nav-bar");
   navbar.addEventListener("animationend", function () {
     navbar.style.visibility = "visible";
   });

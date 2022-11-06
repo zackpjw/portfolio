@@ -688,12 +688,13 @@ p {
 }
 
 .ab__box {
-  animation: slideUp 800ms ease;
-  -webkit-animation: slideUp 800ms ease;
-  -moz-animation: slideUp 800ms ease;
+  animation: slideUp 1000ms ease var(--delay);
+  -webkit-animation: slideUp 1000ms ease var(--delay);
+  -moz-animation: slideUp 1000ms ease var(--delay);
   flex-direction: column;
   padding: 0 16px 16px 16px;
   flex: 100%;
+  opacity: 0;
 }
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .ab__box {

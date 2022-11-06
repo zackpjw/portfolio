@@ -1,12 +1,27 @@
 // ~PRELOADER JS
 function mainLoadingAnimation() {
+  var loader = document.querySelector(".loader");
   let loadingAnimationEnd = false;
   if (loadingAnimationEnd == false) {
-    gsap.from(".loader", {
+    gsap.from(loader, {
       duration: 1,
       y: "0vh",
       ease: "expo.out",
       delay: 5.5,
+    });
+    loadingAnimationEnd = true;
+  }
+}
+
+function secondLoadingAnimation() {
+  var loader = document.querySelector(".loader");
+  let loadingAnimationEnd = false;
+  if (loadingAnimationEnd == false) {
+    gsap.from(loader, {
+      duration: 1,
+      y: "0vh",
+      ease: "expo.out",
+      delay: 1,
     });
     loadingAnimationEnd = true;
   }
