@@ -7,6 +7,13 @@
 
     <!-- EXTERNAL JS -->
     <script defer type="text/javascript" src="../src/index.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="../src/preloader.js"
+      onload="secondLoadingAnimation();"
+    ></script>
+    <script defer type="text/javascript" src="../src/casestudies.js"></script>
 
     <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
@@ -42,8 +49,9 @@
   </head>
 
   <body>
+    <div class="loader">::before</div>
     <header id="header" class="section-container">
-      <nav class="nav-bar" style="--delay: 800ms">
+      <nav class="nav-bar" style="--delay: 1300ms">
         <a class="nav-bar__brand" href="index.html">杰</a>
         <button class="nav-bar__toggler" type="button">
           <span class="toggler-icon top-bar"></span>
@@ -69,7 +77,7 @@
 
     <section id="home">
       <div class="section-container">
-        <div class="case-wrapper">
+        <div class="case-wrapper" style="--delay: 1000ms">
           <div class="case-block">
             <div class="case-card__col">
               <div>
@@ -170,6 +178,9 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script> -->
+
+    <!-- GSAP ANIMATION -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>

@@ -2,12 +2,17 @@
 
 .case {
   &-wrapper {
+    animation: slideUp 1000ms ease var(--delay);
+    -webkit-animation: slideUp 1000ms ease var(--delay);
+    -moz-animation: slideUp 1000ms ease var(--delay);
     padding: 0 16px 16px 16px;
+    opacity: 0;
 
     @include mixin.portraitTablet {
       margin: auto 50px;
     }
   }
+
   // Flexbox applied here.
   &-block {
     display: flex;
