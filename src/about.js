@@ -134,3 +134,11 @@ function finalStateAboutBox() {
   });
 }
 finalStateAboutBox();
+
+function finalStateAboutColumn() {
+  let aboutCol = document.querySelector(".ab__column");
+  aboutCol.addEventListener("animationend", function () {
+    aboutCol.style.opacity = "1";
+  });
+}
+finalStateAboutColumn();

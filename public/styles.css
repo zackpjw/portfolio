@@ -60,7 +60,6 @@ p {
   100% {
     opacity: 1;
     transform: translateY(0);
-    visibility: visible;
   }
 }
 
@@ -72,7 +71,6 @@ p {
   100% {
     opacity: 1;
     transform: translateY(0);
-    visibility: visible;
   }
 }
 .nav-bar {
@@ -84,8 +82,8 @@ p {
   flex: 100%;
   position: relative;
   padding: 20px 20px 3em 20px;
-  visibility: hidden;
   z-index: 3;
+  opacity: 0;
 }
 .nav-bar__brand {
   font-family: "Noto Serif SC", serif;
@@ -442,7 +440,6 @@ p {
   }
   100% {
     opacity: 0;
-    visibility: hidden;
   }
 }
 
@@ -452,11 +449,10 @@ p {
   }
   100% {
     opacity: 0;
-    visibility: hidden;
   }
 }
 .loader {
-  background-color: #212427;
+  background-color: #000;
   position: absolute;
   top: 0;
   left: 0;
@@ -468,13 +464,13 @@ p {
 }
 @media only screen and (max-width: 600px) {
   .loader__box {
-    margin: 100px 60px;
+    margin: 100px 30px;
     width: 50%;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .loader__box {
-    margin: 100px 80px;
+    margin: 100px 50px;
     width: 50%;
   }
 }
@@ -540,9 +536,9 @@ p {
   margin-top: 3em;
 }
 .home__box {
-  animation: slideUp 800ms ease var(--delay);
-  -webkit-animation: slideUp 800ms ease var(--delay);
-  -moz-animation: slideUp 800ms ease var(--delay);
+  animation: slideUp 1000ms ease var(--delay);
+  -webkit-animation: slideUp 1000ms ease var(--delay);
+  -moz-animation: slideUp 1000ms ease var(--delay);
   flex: 100%;
   padding: 16px;
   opacity: 0;
@@ -761,11 +757,15 @@ p {
   }
 }
 .ab__hero {
+  animation: slideUp 1000ms ease var(--delay);
+  -webkit-animation: slideUp 1000ms ease var(--delay);
+  -moz-animation: slideUp 1000ms ease var(--delay);
   height: auto;
   position: relative;
   transform: translateY(0px);
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
+  opacity: 1;
 }
 @media only screen and (min-width: 769px) and (max-width: 993px) {
   .ab__hero {

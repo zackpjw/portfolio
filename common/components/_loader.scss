@@ -6,12 +6,11 @@
   }
   100% {
     opacity: 0;
-    visibility: hidden;
   }
 }
 
 .loader {
-  background-color: mixin.$dark;
+  background-color: mixin.$black;
   position: absolute;
   top: 0;
   left: 0;
@@ -24,12 +23,12 @@
 
   &__box {
     @include mixin.mobile {
-      margin: 100px 60px;
+      margin: 100px 30px;
       width: 50%;
     }
 
     @include mixin.portraitTablet {
-      margin: 100px 80px;
+      margin: 100px 50px;
       width: 50%;
     }
 

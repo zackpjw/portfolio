@@ -23,9 +23,9 @@
   margin-top: 3em;
 
   &__box {
-    animation: slideUp 800ms ease var(--delay);
-    -webkit-animation: slideUp 800ms ease var(--delay);
-    -moz-animation: slideUp 800ms ease var(--delay);
+    animation: slideUp 1000ms ease var(--delay);
+    -webkit-animation: slideUp 1000ms ease var(--delay);
+    -moz-animation: slideUp 1000ms ease var(--delay);
     flex: 100%;
     padding: 16px;
     opacity: 0;

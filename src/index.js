@@ -1,4 +1,13 @@
 // ~GLOBAL JS
+// SET VISIBILITY OF NAVBAR TO VISIBLE AFTER ANIMATION ENDS
+function finalStateNavbar() {
+  let navbar = document.querySelector(".nav-bar");
+  navbar.addEventListener("animationend", function () {
+    navbar.style.opacity = "1";
+  });
+}
+finalStateNavbar();
+
 // NAVBAR MENU TOGGLER
 const menuBtn = document.querySelector(".nav-bar__toggler");
 const navbarCollapse = document.querySelector(".nav__menu");
@@ -32,15 +41,6 @@ menuBtn.addEventListener("click", function () {
     menuOpen = false;
   }
 });
-
-// SET VISIBILITY OF NAVBAR TO VISIBLE AFTER ANIMATION ENDS
-function finalStateNavbar() {
-  let navbar = document.querySelector(".nav-bar");
-  navbar.addEventListener("animationend", function () {
-    navbar.style.visibility = "visible";
-  });
-}
-finalStateNavbar();
 
 // function entranceAnimation() {
 //   if (!loadingAnimationEnd == true) {
