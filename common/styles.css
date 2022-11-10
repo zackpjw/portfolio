@@ -96,10 +96,10 @@ p {
   -webkit-animation-delay: 5000ms;
           animation-delay: 5000ms;
   border: none;
-  margin-right: 20px;
+  margin-right: 22px;
   position: fixed;
   top: 41px;
-  right: 23px;
+  right: 20px;
   width: 20px;
   z-index: 1;
 }
