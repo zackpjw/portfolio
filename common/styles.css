@@ -52,10 +52,6 @@ p {
   font-size: 1.3em;
 }
 
-span {
-  font-family: "Circular Std", sans-serif;
-}
-
 @-webkit-keyframes slideDown {
   0% {
     opacity: 0;
@@ -1094,6 +1090,9 @@ span {
   font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
+}
+.card__contents span {
+  font-family: "Circular Std", sans-serif;
 }
 .card__contents:hover h1 {
   color: #ff0000;

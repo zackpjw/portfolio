@@ -80,6 +80,10 @@
 
   // Title changes color when .card__contents is hovered.
   &__contents {
+    span {
+      font-family: mixin.$fontCircular;
+    }
+
     &:hover {
       h1 {
         color: mixin.$red;
