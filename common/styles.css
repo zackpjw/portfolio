@@ -52,6 +52,10 @@ p {
   font-size: 1.3em;
 }
 
+span {
+  font-family: "Circular Std", sans-serif;
+}
+
 @-webkit-keyframes slideDown {
   0% {
     opacity: 0;
