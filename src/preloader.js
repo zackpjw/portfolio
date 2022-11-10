@@ -8,6 +8,8 @@ function mainLoadingAnimation() {
       y: "0vh",
       ease: "expo.out",
       delay: 5.5,
+      onComplete: hideLoader,
+      allowMainPageScroll,
     });
     loadingAnimationEnd = true;
   }
@@ -22,9 +24,30 @@ function secondLoadingAnimation() {
       y: "0vh",
       ease: "expo.out",
       delay: 1,
+      onComplete: hideLoader,
+      allowPageScroll,
     });
     loadingAnimationEnd = true;
   }
+}
+
+// REMOVE PRELOADER AFTER ANIMATING
+function hideLoader() {
+  const element = document.querySelector("div");
+  element.remove(".loader");
+}
+
+// ADD OVERFLOW-Y TO BODY ELEMENT AFTER ANIMATION
+function allowMainPageScroll() {
+  setTimeout(function () {
+    document.body.style.overflowY = "auto";
+  }, 6500);
+}
+
+function allowPageScroll() {
+  setTimeout(function () {
+    document.body.style.overflowY = "auto";
+  }, 2000);
 }
 
 // PRELOADER PERCENTAGE COUNTER
