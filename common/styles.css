@@ -96,7 +96,7 @@ p {
   -webkit-animation-delay: 5000ms;
           animation-delay: 5000ms;
   border: none;
-  margin-right: 22px;
+  margin-right: 20px;
   position: fixed;
   top: 41px;
   right: 20px;
@@ -253,7 +253,7 @@ p {
   padding: 0;
   position: fixed;
   top: 19px;
-  right: 22px;
+  right: 18px;
 }
 .nav__item {
   font-family: "Kanit", sans-serif;
